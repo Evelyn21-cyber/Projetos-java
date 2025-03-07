@@ -2,37 +2,22 @@ package org.example;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
+import junit.framework.TestSu
+public class App
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
+    public static void main( String[] args )
     {
-        super( testName );
+        Scanner read = new Scanner(System.in);
+        System.out.println("Informe um número inteiro: ");
+        int num1 = read.nextInt();
+        int result = 1;
+
+        for (int i = 1; i <= num1; i++) {
+            result *= i;
+
+        }
+        System.out.println("O fatorial do número " +num1+ " é " +result+ ".")
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }
